@@ -1,0 +1,21 @@
+{
+  "name": "RappiUI",
+  "authors": [
+    "Juan Caicedo <jjcc1421@gmail.com>"
+  ],
+  "description": "Rapi UI contest",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "rappi"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
