@@ -14,5 +14,21 @@ Article.prototype.shortHTML = function () {
         '</header>' +
         '<p>"' + content.substring(0, 20) + '..."</p>' +
         '</article>';
-    return null;
+    return article;
+};
+
+Article.prototype.fullHTML = function () {
+    var article =
+        '<div class="well animated bounceInDown">' +
+        '<div class="row">' +
+        '<div class="col-xs-4">' +
+        '<img src="' + this.image + '" alt="Smiley face" width="100%">' +
+        '</div>' +
+        '<div class="col-xs-8">' +
+        '<h3>' + this.title + '</h3>' +
+        '<p>' + this.content + '</p>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
+    return article;
 };
