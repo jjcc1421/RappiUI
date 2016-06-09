@@ -1,21 +1,22 @@
 var Request = (function () {
     var call = function () {
+        before();
         $.ajax({
-            url: "C:/PROYECTOS/otros/rappi/testUI/project/requests/news_mock.json",
+            url: "/requests/news_mock.json",
             cache: false
-        }).always(function () {
-
-        }).done(function (data, textStatus, jqXHR) {
-
-        }).fail(function (jqXHR, textStatus, errorThrown) {
-
-        });
+        })
+            .always(always)
+            .done(done)
+            .fail(fail);
     };
 
     var before = function () {
     };
 
     var done = function (data, textStatus, jqXHR) {
+        array.forEach(function (article) {
+
+        }, this);
     };
 
     var fail = function (jqXHR, textStatus, errorThrown) {

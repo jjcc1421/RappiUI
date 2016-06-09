@@ -8,12 +8,14 @@ function Article(id, tittle, content, image) {
 Article.prototype.shortHTML = function () {
     var content = this.content;
     var article =
+        '<div class="col-md-12 animated bounceInLeft" data-rappi-article=' + this.id + '>' +
         '<article class="well">' +
         '<header>' +
         '<h2>' + this.title + '</h2>' +
         '</header>' +
         '<p>"' + content.substring(0, 20) + '..."</p>' +
-        '</article>';
+        '</article>' +
+        '</div>';
     return article;
 };
 
