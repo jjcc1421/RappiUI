@@ -11,15 +11,19 @@ var Request = (function () {
     };
 
     var before = function () {
+        $('#articles-contanier').html('<div class="loader-inner ball-pulse"></div>');
+        $('.loader-inner').loaders();
     };
 
     var done = function (data, textStatus, jqXHR) {
         try {
+
             data.forEach(function (article) {
-                myArticle=new Article(article);
+                myArticle = new Article(article);
                 ArticlesCollector.setArticle(myArticle);
             }, this);
             ArticlesCollector.renderArticles('#articles-contanier');
+            ArticlesUI.setShortClick();
         } catch (err) {
             console.error(err);
         }
@@ -29,9 +33,11 @@ var Request = (function () {
     };
 
     var always = function () {
+        $('#articles-contanier').html("");
     };
 
     return {
+        before: before,
         call: call
     };
 

@@ -11,13 +11,13 @@ function Article(article) {
 Article.prototype.shortHTML = function () {
     var content = this.content;
     var article =
-        '<div class="col-md-6 animated bounceInLeft artilce-short" data-rappi-article=' + this.id + '>' +
-        '<article class="well">' +
+        '<div class="col-md-6 animated bounceInLeft" >' +
+        '<div class="well article-short" data-rappi-article=' + this.id + '>' +
         '<header>' +
-        '<img src="http://lorempixel.com/300/300" class="img-circle" alt="Smiley face" width="50px" style="float:left"> ' +
+        '<img src="' + this.image + '" class="img-circle" alt="Smiley face" width="50px" style="float:left;"> ' +
         '<h3>' + this.title + '</h3>' +
         '</header>' +
-        '</article>' +
+        '</div>' +
         '</div>';
     return article;
 };
@@ -26,8 +26,8 @@ Article.prototype.shortHTML = function () {
  * @Return string - Return full HTML view element of article
  */
 Article.prototype.fullHTML = function () {
-    var article =
-        '<div class="well animated bounceInDown article article-full" data-rappi-article=' + this.id + '>' +
+    var myArticle =
+        '<div class="well article-full" data-rappi-article=' + this.id + '>' +
         '<div class="row">' +
         '<div class="col-xs-4">' +
         '<img src="' + this.image + '" alt="Smiley face" width="100%">' +
@@ -38,5 +38,5 @@ Article.prototype.fullHTML = function () {
         '</div>' +
         '</div>' +
         '</div>';
-    return article;
+    return myArticle;
 };
