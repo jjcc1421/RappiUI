@@ -1,4 +1,4 @@
 $(document).ready(function () {
-    //Request.call();
-    Request.before();
+    Request.call();
+    //Request.before();
 });
