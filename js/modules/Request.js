@@ -15,7 +15,7 @@ var Request = (function () {
 
     var done = function (data, textStatus, jqXHR) {
         array.forEach(function (article) {
-
+            ArticlesCollector.setData(article);
         }, this);
     };
 
