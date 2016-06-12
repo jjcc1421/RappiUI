@@ -2,7 +2,7 @@ var Request = (function () {
     var call = function () {
         before();
         $.ajax({
-            url: "/requests/news_mock.json",
+            url: "requests/news_mock.json",
             cache: false
         })
             .always(always)
@@ -14,9 +14,15 @@ var Request = (function () {
     };
 
     var done = function (data, textStatus, jqXHR) {
-        array.forEach(function (article) {
-            ArticlesCollector.setData(article);
-        }, this);
+        try {
+            data.forEach(function (article) {
+                myArticle=new Article(article);
+                ArticlesCollector.setArticle(myArticle);
+            }, this);
+            ArticlesCollector.renderArticles('#articles-contanier');
+        } catch (err) {
+            console.error(err);
+        }
     };
 
     var fail = function (jqXHR, textStatus, errorThrown) {

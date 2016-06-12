@@ -1,25 +1,26 @@
-function Article(id, tittle, content, image) {
-    this.id = id;
-    this.title = tittle;
-    this.content = content;
-    this.image = image;
+function Article(article) {
+    this.id = article.id;
+    this.title = article.title;
+    this.content = article.content;
+    this.image = article.image;
 }
+
 /**
  * @Return string - Returns short html view element ArticleS 
  */
 Article.prototype.shortHTML = function () {
     var content = this.content;
     var article =
-        '<div class="col-md-12 animated bounceInLeft article artilce-short close" data-rappi-article=' + this.id + '>' +
+        '<div class="col-md-6 animated bounceInLeft artilce-short" data-rappi-article=' + this.id + '>' +
         '<article class="well">' +
         '<header>' +
-        '<h2>' + this.title + '</h2>' +
+        '<img src="http://lorempixel.com/300/300" class="img-circle" alt="Smiley face" width="50px" style="float:left"> ' +
+        '<h3>' + this.title + '</h3>' +
         '</header>' +
         '</article>' +
         '</div>';
     return article;
 };
-
 
 /**
  * @Return string - Return full HTML view element of article
