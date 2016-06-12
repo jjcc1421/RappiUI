@@ -11,7 +11,8 @@ function Article(article) {
 Article.prototype.shortHTML = function () {
     var content = this.content;
     var article =
-        '<div class="col-md-6 animated bounceInLeft" >' +
+        //'<div class="col-md-6 animated bounceInLeft" >' +
+        '<div class="col-md-12 animated bounceInLeft" >' +
         '<div class="well article-short" data-rappi-article=' + this.id + '>' +
         '<header>' +
         '<img src="' + this.image + '" class="img-circle" alt="Smiley face" width="50px" style="float:left;"> ' +
