@@ -15,7 +15,7 @@ Article.prototype.shortHTML = function () {
         '<div class="col-md-12 animated bounceInLeft" >' +
         '<div class="well article-short" data-rappi-article=' + this.id + '>' +
         '<header>' +
-        '<img src="' + this.image + '" class="img-circle" alt="Smiley face" width="50px" style="float:left;"> ' +
+        '<img src="' + this.image + '" class="img-circle shortImage" alt="Smiley face" width="50px"> ' +
         '<h3>' + this.title + '</h3>' +
         '</header>' +
         '</div>' +
@@ -41,3 +41,7 @@ Article.prototype.fullHTML = function () {
         '</div>';
     return myArticle;
 };
+
+Article.prototype.quickTitle = function () {
+    return '<h3>' + this.title + '</h3>';
+}

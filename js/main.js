@@ -1,4 +1,5 @@
 $(document).ready(function () {
-    Request.call();
+    ArticlesUI.setShowArticlesClick();
+    //Request.call();
     //Request.before();
 });

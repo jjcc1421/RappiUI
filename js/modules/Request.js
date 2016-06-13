@@ -2,7 +2,7 @@ var Request = (function () {
     var call = function () {
         before();
         $.ajax({
-            url: "requests/news_mock.json",
+            url: config.requestUrl,
             cache: false
         })
             .always(always)

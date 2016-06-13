@@ -10,13 +10,14 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.5.0/hamburgers.min.css">
     <style>
         body {
             background-color: #ececea;
         }
         
         .ball-pulse > div {
-            background: orange;
+            background: #ff7f7f;
         }
         
         .well {
@@ -32,15 +33,37 @@
         .navbar-default .navbar-brand {
             color: #fff;
         }
+        
+        .shortImage {
+            float: left;
+            margin-top: -15px;
+            margin-right: 5px;
+        }
+        
+        .hamburger-inner,
+        .hamburger-inner:after,
+        .hamburger-inner:before {
+            background-color: #fff;
+        }
+        
+        #quick-title {
+            color: #fff;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Brand</a>
+            <div class="navbar-header">
+                <div class="navbar-left">
+                    <div id="articles-opener" class="hamburger hamburger--spin-r">
+                        <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                        </span>
+                    </div>
+                </div>
+                <div id="quick-title" class="navbar-left">
                 </div>
             </div>
         </nav>
@@ -51,7 +74,7 @@
     </section>
     <footer class="footer">
         <div class="container">
-            <p>With love: Juan Caicedo</p>
+            <p>With love: Juan Caicedo (jjcc1421)</p>
         </div>
     </footer>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -60,10 +83,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.css.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.1/immutable.min.js"></script>
 
-    <script type="text/javascript" src="js/class/Article.js"></script>
-    <script type="text/javascript" src="js/UI/ArticlesUI.js"></script>
-    <script type="text/javascript" src="js/modules/ArticlesCollector.js"></script>
-    <script type="text/javascript" src="js/modules/Request.js"></script>
+    <script type="text/javascript" src="js/dist/app.min.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 
